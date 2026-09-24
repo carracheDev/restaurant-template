@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Container } from "@/components/layout/Container";
 import type { Restaurant } from "@/types/restaurant";
 
@@ -60,7 +62,7 @@ export function Footer({ restaurant }: { restaurant: Restaurant }) {
           <div>
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F97316]/15 text-[#F9C7A7]">
-                <img src={restaurant.brand.logo} alt={restaurant.brand.name} className="h-7 w-7 object-contain" />
+                <Image src={restaurant.brand.logo} alt={restaurant.brand.name} width={28} height={28} className="h-7 w-7 object-contain" />
               </div>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#F9C7A7]">Restaurant</p>
