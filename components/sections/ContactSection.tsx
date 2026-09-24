@@ -335,14 +335,29 @@ export function ContactSection({ restaurant }: { restaurant: Restaurant }) {
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3.5 text-sm font-semibold text-white shadow-[0_18px_32px_rgba(249,115,22,0.28)] transition-transform duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316]/70"
-              style={{ backgroundColor: restaurant.theme.primary }}
-            >
-              <SendIcon />
-              Envoyer la demande
-            </button>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={
+                  restaurant.contact.mapUrl ||
+                  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${restaurant.contact.address}, ${restaurant.contact.city}, ${restaurant.contact.country}`)}`
+                }
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F5E7DA] bg-[#FFFDFB] px-5 py-3.5 text-sm font-semibold text-[#1C1917] transition-colors hover:border-[#F9C7A7] hover:bg-[#fffaf5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316]/60"
+              >
+                <LocationIcon />
+                Voir la localisation
+              </a>
+
+              <button
+                type="submit"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3.5 text-sm font-semibold text-white shadow-[0_18px_32px_rgba(249,115,22,0.28)] transition-transform duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316]/70"
+                style={{ backgroundColor: restaurant.theme.primary }}
+              >
+                <SendIcon />
+                Envoyer la demande
+              </button>
+            </div>
           </form>
         </div>
 

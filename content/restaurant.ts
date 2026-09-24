@@ -28,8 +28,8 @@ export const restaurant: Restaurant = {
     },
   },
   contact: {
-    phone: "+229 97 21 45 89",
-    whatsapp: "+229 97 21 45 89",
+    phone: "0141193597",
+    whatsapp: "0141193597",
     email: "bonjour@lepatio-cotonou.bj",
     address: "Avenue de la Marina, Cotonou",
     city: "Cotonou",
